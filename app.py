@@ -22,7 +22,7 @@ external_stylesheets = [
     }
 ]
 
-patients=pd.read_csv('IndividualDetails (1).csv')
+patients=pd.read_csv('IndividualDetails(1).csv')
 
 total=patients.shape[0]
 active=patients[patients['current_status']=='Hospitalized'].shape[0]
@@ -35,7 +35,7 @@ age['Percentage'] = age['Percentage'].str.replace('%', '').astype(float)
 # Create a pie chart figure
 fig1 = px.pie(age, values='Percentage', names='AgeGroup', title='')
 
-ag2 = pd.read_csv('C:/Users/DELL/Downloads/corona/AgeGroupDetails (2).csv')
+ag2 = pd.read_csv('C:/Users/DELL/Downloads/corona/AgeGroupDetails(2).csv')
 ag2['Percentage'] = ag2['Percentage'].str.replace('%', '').astype(float)
 
 fig2 = px.line(ag2, x='AgeGroup', y='Percentage', title='')
